@@ -1,12 +1,12 @@
 package com.company.stack;
 
-public class Stack implements IStack {
+public class StackArrayImpl implements IStack {
 
     private static int MAX_STACK_COUNT = 50;
     private String[] stackOfObject = new String[MAX_STACK_COUNT];
     private static int sequenceOfTopObject;
 
-    public Stack() {
+    public StackArrayImpl() {
         sequenceOfTopObject = -1;
     }
 
