@@ -1,25 +1,38 @@
 package com.company;
 
+import com.company.List.LinkedList;
+import com.company.List.Node;
 import com.company.stack.StackArrayImpl;
-import com.company.stack.StackLinkedListImpl;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        lifoStackInit();
-        System.out.println("-----------");
-        reverseCharactersOfStringToStack();
-
-        System.out.println("-----------");
-        StackLinkedListImpl stackLinkedList = new StackLinkedListImpl();
-        stackLinkedList.push("eray");
-        stackLinkedList.push("keskin");
-        stackLinkedList.top();
-        stackLinkedList.top();
-        stackLinkedList.top();
-        System.out.println("Stack is empty? : "+stackLinkedList.isEmpty());
-
+//
+//        lifoStackInit();
+//        System.out.println("-----------");
+//        reverseCharactersOfStringToStack();
+//
+//        System.out.println("-----------");
+//        StackLinkedListImpl stackLinkedList = new StackLinkedListImpl();
+//        stackLinkedList.push("eray");
+//        stackLinkedList.push("keskin");
+//        stackLinkedList.top();
+//        stackLinkedList.top();
+//        stackLinkedList.top();
+//        System.out.println("Stack is empty? : "+stackLinkedList.isEmpty());
+//
+//
+//
+//
+        LinkedList linkedList = new LinkedList(new Node("root"));
+        linkedList.add("bir");
+        linkedList.add("iki");
+        linkedList.add("uc");
+        linkedList.add("dort");
+        linkedList.add("bes");
+        linkedList.add("alti");
+        linkedList.delete(6);
+        linkedList.printListItems();
 
     }
 
@@ -40,7 +53,7 @@ public class Main {
     }
 
     private static void lifoStackInit() {
-        System.out.println("--cleLIFO Stack--");
+        System.out.println("--LIFO Stack--");
         StackArrayImpl stackArrayImpl = new StackArrayImpl();
         String hello = "HELLO";
         stackArrayImpl.push(hello);
