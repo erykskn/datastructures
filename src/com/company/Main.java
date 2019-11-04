@@ -1,7 +1,6 @@
 package com.company;
 
-import com.company.List.LinkedList;
-import com.company.List.Node;
+import com.company.Queue.Queue;
 import com.company.stack.StackArrayImpl;
 
 public class Main {
@@ -24,15 +23,27 @@ public class Main {
 //
 //
 //
-        LinkedList linkedList = new LinkedList(new Node("root"));
-        linkedList.add("bir");
-        linkedList.add("iki");
-        linkedList.add("uc");
-        linkedList.add("dort");
-        linkedList.add("bes");
-        linkedList.add("alti");
-        linkedList.delete(6);
-        linkedList.printListItems();
+//        LinkedList linkedList = new LinkedList(new Node("root"));
+//        linkedList.add("bir");
+//        linkedList.add("iki");
+//        linkedList.add("uc");
+//        linkedList.add("dort");
+//        linkedList.add("bes");
+//        linkedList.add("alti");
+//        linkedList.delete(6);
+//        linkedList.printListItems();
+
+        Queue queue = new Queue(7);
+        queue.enqueue("eray");
+        queue.enqueue("keskin");
+        queue.enqueue("ceng");
+        queue.getHeadItem();
+        queue.dequeue();
+        queue.getHeadItem();
+        queue.dequeue();
+        queue.getHeadItem();
+        System.out.println(String.format("Queue size %s", queue.getSize()));
+
 
     }
 
